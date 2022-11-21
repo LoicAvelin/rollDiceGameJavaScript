@@ -1,0 +1,173 @@
+$first-color: rgb(210, 58, 49);
+$second-color: rgb(247, 247, 247);
+$third-color: white;
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  height: 100vh;
+  // START NOTIFICATION
+  .notification {
+    background-color: $first-color;
+    color: $third-color;
+
+    h1 {
+      font-size: large;
+      font-weight: bolder;
+    }
+
+    h2 {
+      font-size: large;
+      text-decoration: underline;
+    }
+
+    ol {
+      list-style-position: inside;
+    }
+  }
+  // END NOTIFICATION
+
+  #newGame {
+    background-color: transparent;
+    padding: 2rem;
+  }
+
+  ion-icon {
+    padding: 1rem;
+    color: $first-color;
+  }
+
+  // START COLUMN PLAYER
+  .title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  #globalPlayer1, #globalPlayer2 {
+    color: $first-color;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+
+  #player1, #player2 {
+    display: inline-flex;
+
+    #dotPlayer2 {
+      display: none;
+    }
+  }
+
+  .columnPlayer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  #columnPlayer1 {
+    background-color: $second-color;
+  }
+
+  .current {
+    background-color: $first-color;
+    box-shadow: 10px 5px 5px rgb(116, 114, 114);
+    height: 6rem;
+    width: 6rem;
+
+    span {
+      color: $third-color;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+  // END COLUMN PLAYER
+
+  // START MIDDLE DIV WITH DIE
+  #middle {
+    display: flex;
+    justify-content: center;
+    margin: 0rem;
+
+    #die {
+      padding: 0rem 0rem 0rem 2rem;
+    }
+
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+
+    #dieFace1 {
+      display: block;
+    }
+
+    #dieFace2, #dieFace3, #dieFace4, #dieFace5, #dieFace6 {
+    display: none;
+    }
+  
+    #hold, #rollDice {
+      background-color: transparent;
+    }
+  }
+  // END MIDDLE DIV WITH DIE
+}
+
+// RESPONSIVE
+/* POUR LES I-PAD ET TABLETTES */
+@media screen and (min-width: 700px) {
+  :root {
+      font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 700px) and (orientation: landscape) {
+body {
+  background: linear-gradient(to left, white 50%, rgb(247, 247, 247) 50%);
+}
+ // START COLUMN PLAYER
+.columnPlayer {
+  padding: 0rem;
+
+  #player1, #player2 {
+    margin-top: 3rem;
+  }
+
+  #globalPlayer1, #globalPlayer2 {
+    font-size: 6rem;
+  }
+
+  .current {
+    margin-top: 15rem;
+
+    #roundPlayer1, #roundPlayer2 {
+      font-size: 2rem;
+    }
+  }
+}
+// START MIDDLE
+#middle {
+  flex-direction: column;
+
+  #die {
+    order: 1;
+    margin: 8rem 0rem 10rem 0rem;
+  }
+
+  #middle-rollDice {
+    order: 2;
+  }
+
+  #middle-hold {
+    order: 3;
+  }
+}
+// END MIDDLE
+}
+
+/* POUR LES ORDINATEURS */
+@media screen and (min-width: 1030px) {
+  :root {
+      font-size: 18px;
+  }
+}

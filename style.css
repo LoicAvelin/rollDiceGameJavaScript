@@ -1,0 +1,131 @@
+body {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  height: 100vh;
+}
+body .notification {
+  background-color: rgb(210, 58, 49);
+  color: white;
+}
+body .notification h1 {
+  font-size: large;
+  font-weight: bolder;
+}
+body .notification h2 {
+  font-size: large;
+  text-decoration: underline;
+}
+body .notification ol {
+  list-style-position: inside;
+}
+body #newGame {
+  background-color: transparent;
+  padding: 2rem;
+}
+body ion-icon {
+  padding: 1rem;
+  color: rgb(210, 58, 49);
+}
+body .title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+body #globalPlayer1, body #globalPlayer2 {
+  color: rgb(210, 58, 49);
+  font-size: 3rem;
+  font-weight: 100;
+}
+body #player1, body #player2 {
+  display: inline-flex;
+}
+body #player1 #dotPlayer2, body #player2 #dotPlayer2 {
+  display: none;
+}
+body .columnPlayer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+body #columnPlayer1 {
+  background-color: rgb(247, 247, 247);
+}
+body .current {
+  background-color: rgb(210, 58, 49);
+  box-shadow: 10px 5px 5px rgb(116, 114, 114);
+  height: 6rem;
+  width: 6rem;
+}
+body .current span {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
+body #middle {
+  display: flex;
+  justify-content: center;
+  margin: 0rem;
+}
+body #middle #die {
+  padding: 0rem 0rem 0rem 2rem;
+}
+body #middle img {
+  height: 10rem;
+  width: 10rem;
+}
+body #middle #dieFace1 {
+  display: block;
+}
+body #middle #dieFace2, body #middle #dieFace3, body #middle #dieFace4, body #middle #dieFace5, body #middle #dieFace6 {
+  display: none;
+}
+body #middle #hold, body #middle #rollDice {
+  background-color: transparent;
+}
+
+/* POUR LES I-PAD ET TABLETTES */
+@media screen and (min-width: 700px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 700px) and (orientation: landscape) {
+  body {
+    background: linear-gradient(to left, white 50%, rgb(247, 247, 247) 50%);
+  }
+  .columnPlayer {
+    padding: 0rem;
+  }
+  .columnPlayer #player1, .columnPlayer #player2 {
+    margin-top: 3rem;
+  }
+  .columnPlayer #globalPlayer1, .columnPlayer #globalPlayer2 {
+    font-size: 6rem;
+  }
+  .columnPlayer .current {
+    margin-top: 15rem;
+  }
+  .columnPlayer .current #roundPlayer1, .columnPlayer .current #roundPlayer2 {
+    font-size: 2rem;
+  }
+  #middle {
+    flex-direction: column;
+  }
+  #middle #die {
+    order: 1;
+    margin: 8rem 0rem 10rem 0rem;
+  }
+  #middle #middle-rollDice {
+    order: 2;
+  }
+  #middle #middle-hold {
+    order: 3;
+  }
+}
+/* POUR LES ORDINATEURS */
+@media screen and (min-width: 1030px) {
+  :root {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */

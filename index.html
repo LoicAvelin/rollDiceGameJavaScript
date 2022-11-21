@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- START Get the font from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- END Get the font from google fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Petit jeu de dé</title>
+</head>
+<body id="body">
+  <div class="notification">
+    <button class="delete"></button>
+      <h1>Welcome to this two-player dice game. 👍🏻</h1>
+    <p>
+      <h2>The rules are so simple :</h2>
+      <ol>
+        <li>🎲 Roll the die as many times as you like, but you skip your turn if you roll a 1.</li>
+        <li>👇🏻 You pass your turn when you hold your score and your turn counter is reset to 0.</li>
+        <li>🏆 The first player to reach 100 points wins !</li>
+      </ol>
+    </p>
+  </div>
+  <button class="button is-large is-white is-responsive" id="newGame">
+    <ion-icon name="add-circle-outline" class="icon is-medium"></ion-icon>
+    NEW GAME
+  </button>
+  <div class="columns" id="game">
+    <div class="column columnPlayer" id="columnPlayer1">
+      <div id="player1">
+        <h2 class="title" id="titlePlayer1">PLAYER 1</h2>
+        <ion-icon name="ellipse" class="icon is-small" id="dotPlayer1"></ion-icon>
+      </div>
+      <div>
+        <span id="globalPlayer1">0</span>
+      </div>
+      <div class="current">
+        <h3>CURRENT</h3>
+        <span id="roundPlayer1">0</span>
+      </div>
+    </div>
+    <div class="columns is-vcentered" id="middle">
+      <div class="column" id="middle-hold">
+        <button class="button is-medium is-white is-responsive" id="hold">
+          <ion-icon name="download-outline" class="icon is-medium"></ion-icon>
+          <h3>HOLD</h3>
+        </button>
+      </div>
+      <div class="column" id="die">
+        <img src="./images/die_face_1.svg" alt="Ceci est une image de dé" id="dieFace1">
+        <img src="./images/die_face_2.svg" alt="Ceci est une image de dé" id="dieFace2">
+        <img src="./images/die_face_3.svg" alt="Ceci est une image de dé" id="dieFace3">
+        <img src="./images/die_face_4.svg" alt="Ceci est une image de dé" id="dieFace4"> 
+        <img src="./images/die_face_5.svg" alt="Ceci est une image de dé" id="dieFace5">
+        <img src="./images/die_face_6.svg" alt="Ceci est une image de dé" id="dieFace6">
+      </div>
+      <div class="column" id="middle-rollDice">
+        <button class="button is-medium is-white is-responsive" id="rollDice" type="button">
+          <ion-icon name="sync-outline" class="icon is-medium"></ion-icon>
+          <h3>ROLL DICE</h3>
+        </button>
+      </div>
+    </div>
+    <div class="column columnPlayer" id="columnPlayer2">
+      <div id="player2">
+        <h2 class="title" id="titlePlayer2">PLAYER 2</h2>
+        <ion-icon name="ellipse" class="icon is-small" id="dotPlayer2"></ion-icon>
+      </div>
+      <div>
+        <span id="globalPlayer2">0</span>
+      </div>
+      <div class="current">
+        <h3>CURRENT</h3>
+        <span id="roundPlayer2">0</span>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
